@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as' => 'index',function() {
+    return view('pages.index');
+}]);
+Route::get('/widgets', ['as' => 'widgets',function() {
+    return view('pages.widgets');
+}]);
+Route::get('/charts', ['as' => 'charts',function() {
+    return view('pages.charts');
+}]);
